@@ -1,17 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import Users from './containers/Users';
+import GlobalStyle from './globalStyle';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOM.render(
+  <>
+    <Users />
+    <GlobalStyle />
+  </>,
+  document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//Fragment --> <> </> serve para cumprir a regra do react e encapsular os elementos dentro do que  react pede. 
+//No react não pode renderizar dois elementos, sempe tem que ter um pai de todo mundo um elemento em volta de todo mundo.
